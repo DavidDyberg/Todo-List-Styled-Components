@@ -77,6 +77,7 @@ export const Tasks = styled.div`
         border-radius: 4px;
         margin-right: 5px;
         cursor: pointer;
+        font-size: 16px;
 
         &:hover {
             opacity: 0.8;

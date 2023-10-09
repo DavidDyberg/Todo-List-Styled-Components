@@ -1,11 +1,6 @@
+import { Todo } from '../../utils/types';
 import * as Styles from './Todo-list.styles'
-
 import { FC, useEffect, useState } from "react"
-
-interface Todo {
-    id: number;
-    todo: string;
-  }
 
 export const TodoList: FC = () => {
     const [list, setList] = useState<Todo[]>([]);
@@ -16,7 +11,7 @@ export const TodoList: FC = () => {
         setList(storedList);
       }, []);
     
-      // Save the list to local storage whenever it changes
+      
       useEffect(() => {
         if (list.length === 0) return;
         localStorage.setItem("todoList", JSON.stringify(list));
